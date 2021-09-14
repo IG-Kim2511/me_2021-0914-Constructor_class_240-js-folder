@@ -34,7 +34,7 @@ function Character(a_num) {
     stageElem.appendChild(this.mainElem);
 }
 
-/*🍀Constructor응용 + for loop 
+/*🍀js 40 Constructor응용 + for loop 
 
 for (let i = 1; i < 6; i++) {
     let num = i;
