@@ -1,6 +1,7 @@
 
 const stageElem = document.querySelector(".stage");
 const btn = document.querySelector(".btn");
+const btnC = document.querySelector(".btn_c");
 
 let num=0;  /* js 20 */
 
@@ -51,4 +52,38 @@ btn.addEventListener('click',()=>{
     if (num > 6) {
         num=1;        
     }
+});
+
+
+
+// 🍀 js 30. class
+
+class Character_c {
+    constructor(a_num){
+        this.mainElem = document.createElement("div");
+        this.mainElem.classList.add('character');
+        this.mainElem.innerHTML =`
+            <img src="./img/poke(${a_num}).png" alt="">
+        `;
+        stageElem.appendChild(this.mainElem);
+    }
+
+    sayHi(){
+        console.log('prototype')
+    }
+}
+
+// let ig = new Character_c(num);
+
+btnC.addEventListener('click',()=>{
+
+    num++;  /* js 20 */
+
+    let ig = new Character_c(num);   /* js 30 */
+
+    if (num > 6) {
+        num=1;        
+    }
+
+    console.log(ig)
 });
