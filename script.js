@@ -1,7 +1,9 @@
 
 const stageElem = document.querySelector(".stage");
+const btn = document.querySelector(".btn");
 
-// let num;
+let num=0;  /* js 20 */
+
 
 // 🍀Constructor
 
@@ -20,7 +22,7 @@ function Character(a_num) {
 new Character(1);     */
 
 
-//🍄soft coding + for loop
+//🍄js 10. soft coding 
 function Character(a_num) {
     
     this.mainElem = document.createElement("div");
@@ -31,7 +33,22 @@ function Character(a_num) {
     stageElem.appendChild(this.mainElem);
 }
 
+/*🍀Constructor응용 + for loop 
+
 for (let i = 1; i < 6; i++) {
     let num = i;
     new Character(num);    
-}
+} */
+
+
+// 🍀 Constructor응용 + num++
+btn.addEventListener('click',()=>{
+
+    num++;  /* js 20 */
+
+    new Character(num);   /* js 10 */
+
+    if (num > 6) {
+        num=1;        
+    }
+});
